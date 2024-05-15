@@ -3,10 +3,13 @@ import pyodbc
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 app = FastAPI()
 
 # Database connection string
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL= os.getenv('DATABASE_URL')
+
 
 @app.get("/data/")
 def read_data():
